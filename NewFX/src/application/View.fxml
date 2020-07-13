@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Hello" />
+                  <MenuItem mnemonicParsing="false" text="World" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="54.0" layoutY="53.0" mnemonicParsing="false" text="Button" />
+      <RadioButton layoutX="118.0" layoutY="57.0" mnemonicParsing="false" text="Ok" />
+      <RadioButton layoutX="118.0" layoutY="91.0" mnemonicParsing="false" text="not Ok" />
+      <CheckBox layoutX="220.0" layoutY="57.0" mnemonicParsing="false" text="CheckBox" />
+      <SplitMenuButton layoutX="369.0" layoutY="53.0" mnemonicParsing="false" text="animal">
+        <items>
+          <MenuItem mnemonicParsing="false" text="cat" />
+          <MenuItem mnemonicParsing="false" text="dog" />
+        </items>
+      </SplitMenuButton>
+      <Circle fill="#62fc88" layoutX="155.0" layoutY="247.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <BarChart layoutX="276.0" layoutY="100.0" prefHeight="258.0" prefWidth="311.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

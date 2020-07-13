@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8191 
+#if you put configuration URI in the application.yml
+#it won't work why because configuration of fetch ...
+#before it processes the application.yml file  

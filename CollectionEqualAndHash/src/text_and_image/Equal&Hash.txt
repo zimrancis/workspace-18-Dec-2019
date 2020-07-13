@@ -1,0 +1,40 @@
+So this is how equals and hash code really help in terms of helping collections to avoid any
+duplicates comming into the data structure and they also actually help retrieve the objects 
+as soon as posible. So comming to the hash code why do we need this hash codeis that, collection
+uses very specific kind of a stratigy to raech out to object as soon as possible to fetch them.
+So if you take an example, out here, think of you know hash code we have kind of 1 objects with
+different numbers. Say we have differents Buckets there and then we are numbering it 1-5, 6-1 
+then 11-15. Now think that we have different objects out here with some numbers, then 
+1,6,7,9,11,14,13. So if I say collection please store these objects into your data structure, 
+then collection can actually put them into the buckets so, 1 goes into the bucke[1-5], 6,7,9 go 
+into the bucket[6-10] and 11, 14, and 13 go into the bucket[11-15].
+So when I ask for an object of 13 immediately the collection understands that ok I do not have to 
+check this as collection is sure that the object is into the bucket[11-15].      
+So how many objects are present intotal or just 3 objects that are present in Bucket[11-15].
+So it is easy to pick out object fro 3 objects in this bucket rather then looking out for a lot of
+objects in 1 single bucket. Infact having a hash code really helps in terms of easilly reaching out
+to object and fetching them as fast as possible.     
+
+
+This two equals() and hash() methods look to be very simple and kind of trivial but remember
+for example: say, I have an application which has a database in someother location on the network,
+and it has a table of which holds students, so the PK is registration no something like S123,
+S124, S125 and some name etc and some age etc.
+So these (S123, S124...) are the unique stuff each and every row represents its student. 
+Now what I'm doing is I am getting these objects into my Java App(lication), which is running on at 
+different server altogether could be a web application or something. It's very norlam that database 
+server's running on a different node and java App server's running on a different node and evertime 
+we need some data we send request through the network. So every database request is a network call 
+which is going to increase the traffic as well.
+So in this kind of applications generally we use ORM Framework like Hibernate. So what happens,
+this hibernate framework or this ORM framework generally maintain a collection of objects. 
+So the momment we ask for a particular row it's going to have a collection in which this object is 
+going to be store, and whenever we ask for that object it checks if the row has changed kindtive data
+is in sink or not if it is sink then it is  going o return the object directly from this. nd because
+of this it is avoiding a network call and the respons is also must fast because this is a kind cache 
+here. But if you do not have equals and hash code implemented,there is no way to identify if the 
+particular row of this object is equal to another instance or not. So what we're going to do we're
+going to overload with a lot of objects but still we'll not be able to avoid a network call 
+forth and back! This is going to be very costly application's performance and there will be also a 
+network routs going ahead. So it is really important to understand of this impact of this      
+  

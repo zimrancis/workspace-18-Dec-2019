@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: user
+Build-Jdk: 12.0.1
+Implementation-Title: Spring Boot Custom Security With Database
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.infotech.app
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/SpringBootCustomSecurityWithDatabase
+Created-By: Maven Integration for Eclipse
+
